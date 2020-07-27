@@ -1,0 +1,144 @@
+@font-face {
+  font-family: "Barlow";
+  src: url("../fonts/Barlow-Medium.ttf");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  font-family: "Barlow";
+}
+
+a,
+a:active,
+a:hover,
+a:visited,
+a:link {
+  text-decoration: none;
+  color: inherit;
+}
+
+html,
+body {
+  background-color: #e2e2e2;
+  overflow-x: hidden;
+}
+
+.code__container-project {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.code__container-project__block {
+  width: 800px;
+  height: 500px;
+  background-color: #30363c;
+  border-radius: 4px;
+  display: flex;
+  overflow: hidden;
+}
+
+.code__container-project__block__preview {
+  height: 100%;
+  width: 100%;
+  object-fit: fill;
+}
+
+.code__container-project__block__info {
+  width: 30%;
+  height: 100%;
+  padding: 20px 10px;
+  position: relative;
+}
+
+.code__container-project__block__info__name {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: larger;
+  margin-bottom: 10px;
+}
+
+.code__container-project__block__info__desc {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.code__container-project__block__info__button {
+  position: absolute;
+  bottom: 0;
+  transform: translate(50%, -70%);
+  right: 50%;
+  cursor: pointer;
+  background-color: #00a888 !important;
+  padding: 10px 40px;
+  border-radius: 4px;
+  color: rgba(255, 255, 255, 0.7) !important;
+}
+
+.code__container-project__block__info__button:hover {
+  filter: brightness(90%);
+}
+.code__container-project__block__info__button:active {
+  filter: brightness(70%);
+}
+
+.code__container-author {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.code__container-author__info {
+  width: 800px;
+  height: 150px;
+  background-color: #30363c;
+  border-radius: 4px;
+  margin-bottom: 30px;
+  overflow: hidden;
+  display: flex;
+}
+
+.code__container-author__info__about {
+  display: flex;
+  flex-direction: column;
+  padding: 30px 20px;
+}
+
+.code__container-author__info__about__desc {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.code__container-author__info__about__desc a {
+  color: #00a888;
+}
+
+.code__container-author__info__about__name {
+  color: rgba(255, 255, 255, 0.4);
+  font-size: larger;
+  margin-bottom: 5px;
+}
+
+.code__container-author__info__avi {
+  height: 150px;
+  width: 150px;
+  background-size: 150px 150px;
+  background-image: url("../imgs/author.png");
+}
+
+.code__container-project__block__info__button {
+  border: 0;
+  background-color: inherit;
+}
+
+.skyplay__highlights .slick-slide {
+  width: 80%;
+  height: 100%;
+}
+.slick-initialized .slick-slide {
+  height: 100vh;
+  display: flex;
+}
