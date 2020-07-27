@@ -1,5 +1,5 @@
 $(document).ready(function () {
-  $("#projects").slick({
+  $("#code__project").slick({
     infinite: true,
     arrows: false,
     dots: true,
@@ -15,7 +15,7 @@ $(document).ready(function () {
 });
 
 function injectList(html) {
-  $("#projects").slick("slickAdd", html);
+  $("#code__project").slick("slickAdd", html);
 }
 function createProjectList() {
   const html = [];
@@ -42,24 +42,10 @@ function createProjectList() {
   projectsArray.map(function (project) {
     if (project.name) {
       html.push(`
-      <div class="code__container-project">
-        <div class="code__container-project__block">
-          <picture>
-            <img src="${project.src}" alt="${project.src}" srcset="${project.src}" class="code__container-project__block__preview" />
-          </picture>
-          
-          <div class="code__container-project__block__info">
-            <div class="code__container-project__block__info__name">${project.name}</div>
-            <div class="code__container-project__block__info__desc">${project.desc}</div>
-            <a
-              class="code__container-project__block__info__button"
-              href=${project.url}
-            >
-              Repository
-            </a>
-          </div>
-        </div>
-      </div>`);
+      <picture class="code__project__image-container">
+      <img src="${project.src}" alt="" srcset="${project.src}">
+      </picture>
+      `);
     }
   });
   return html.join("");
