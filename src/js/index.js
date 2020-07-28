@@ -1,13 +1,13 @@
 $(document).ready(function () {
-  $("#code__project").slick({
+  $("#code__width-container__project").slick({
     infinite: true,
     arrows: false,
     dots: true,
     cssEase: "linear",
     centerMode: true,
     slidesToShow: 1,
-    // autoplay: true,
-    // autoplaySpeed: 3000,
+    autoplay: true,
+    autoplaySpeed: 3000,
     touchThreshold: 100,
   });
   const projectsHtml = createProjectList();
@@ -15,7 +15,7 @@ $(document).ready(function () {
 });
 
 function injectList(html) {
-  $("#code__project").slick("slickAdd", html);
+  $("#code__width-container__project").slick("slickAdd", html);
 }
 function createProjectList() {
   const html = [];
@@ -42,8 +42,8 @@ function createProjectList() {
   projectsArray.map(function (project) {
     if (project.name) {
       html.push(`
-      <picture class="code__project__image-container">
-      <img src="${project.src}" alt="" srcset="${project.src}">
+      <picture class="code__width-container__project__image-container">
+        <img src="${project.src}" alt="" srcset="${project.src}">
       </picture>
       `);
     }

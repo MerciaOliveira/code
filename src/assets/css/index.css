@@ -1,4 +1,4 @@
-/* small 460 max */
+/* small 460 min */
 /* medium 1280 max */
 
 @font-face {
@@ -29,17 +29,45 @@ body {
   background-color: #e2e2e2;
   overflow-x: hidden;
 }
-.code__project__image-container {
-  height: 80%;
-  width: 80%;
+.code__width-container {
+  width: 100vw;
+  padding: 0 150px;
 }
+
 .slick-initialized .slick-slide {
   height: 100vh;
-  padding: 50px;
+  padding: 100px 0;
   display: flex;
 }
 
 .slick-slide img {
+  padding: 0 50px;
+  margin: 0 50px;
+  border-radius: 4px;
+  overflow: hidden;
   width: 100%;
   object-fit: contain;
+  background-color: rgb(23, 34, 59, 0.5);
+  -webkit-box-shadow: inset 0px -400px 300px -125px rgba(0, 0, 0, 0.7);
+  -moz-box-shadow: inset 0px -400px 300px -125px rgba(0, 0, 0, 0.7);
+  box-shadow: inset 0px -400px 300px -125px rgba(0, 0, 0, 0.7);
+}
+
+.code__width-container__author__info-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.code__width-container__author__info-container__card {
+  background-color: #263859;
+  width: 100%;
+  height: 150px;
+  margin-bottom: 50px;
+  margin: 0 100px;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.code__width-container__project__image-container {
 }
