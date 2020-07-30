@@ -52,9 +52,9 @@ body {
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
-  -webkit-box-shadow: inset 0px -250px 300px -125px rgba(0, 0, 0, 0.7);
-  -moz-box-shadow: inset 0px -250px 300px -125px rgba(0, 0, 0, 0.7);
-  box-shadow: inset 0px -250px 300px -125px rgba(0, 0, 0, 0.7);
+  -webkit-box-shadow: inset 0px -450px 300px -125px rgba(0, 0, 0, 0.7);
+  -moz-box-shadow: inset 0px -450px 300px -125px rgba(0, 0, 0, 0.7);
+  box-shadow: inset 0px -450px 300px -125px rgba(0, 0, 0, 0.7);
   display: flex;
   flex-direction: column;
   align-items: flex-start;
