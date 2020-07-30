@@ -6,6 +6,7 @@ const sourcemaps = require("gulp-sourcemaps");
 const autoprefixer = require("gulp-autoprefixer");
 const htmlmin = require("gulp-htmlmin");
 const browserSync = require("browser-sync").create();
+const image = require("gulp-image");
 
 const scripts = require("./scripts");
 const styles = require("./styles");
@@ -13,14 +14,13 @@ const styles = require("./styles");
 gulp.task("css", function (done) {
   gulp
     .src(styles)
-    .pipe(sourcemaps.init())
+    .pipe(sourcemaps.init({ loadMaps: true }))
     .pipe(
       autoprefixer({
         overrideBrowserslist: ["last 2 versions"],
       })
     )
     .pipe(cssnano())
-    .pipe(sourcemaps.write("./"))
     .pipe(concat("index.css"))
     .pipe(gulp.dest("dist/src/assets/css"))
     .pipe(
@@ -47,7 +47,15 @@ gulp.task("js", function (done) {
 });
 
 gulp.task("imgs", function (done) {
-  gulp.src(["./src/assets/imgs/*"]).pipe(gulp.dest("dist/src/assets/imgs/"));
+  gulp
+    .src(["./src/assets/imgs/*"])
+    .pipe(image())
+    .pipe(gulp.dest("dist/src/assets/imgs/"))
+    .pipe(
+      browserSync.reload({
+        stream: true,
+      })
+    );
   done();
 });
 

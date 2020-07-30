@@ -7,7 +7,7 @@ $(document).ready(function () {
     centerMode: true,
     slidesToShow: 1,
     autoplay: true,
-    autoplaySpeed: 3000,
+    autoplaySpeed: 5000,
     touchThreshold: 100,
   });
   const projectsHtml = createProjectList();
@@ -22,21 +22,17 @@ function createProjectList() {
   const projectsArray = [
     {
       name: "Pikere",
-      desc: "Aplicativo desktop para upload de imagens",
+      desc:
+        "Aplicativo para desktop de upload de imagens, usando <b>Electron</b>, <b>Puppeteer</b> e <b>VueJS</b>",
       url: "https://github.com/MerciaOliveira/pikere",
       src: "/src/assets/imgs/2.gif",
     },
     {
-      name: "Pikere",
-      desc: "2",
-      url: "#",
+      name: "AngularJS Login Project",
+      desc:
+        "CRUD com login e upload de dados, usando <b>AngularJS</b>, <b>NodeJS</b> e <b>MongoDB</b>",
+      url: "https://github.com/MerciaOliveira/angularjs-login-project",
       src: "/src/assets/imgs/1.gif",
-    },
-    {
-      name: "Pikere",
-      desc: "2",
-      url: "#",
-      src: "/src/assets/imgs/2.gif",
     },
   ];
   projectsArray.map(function (project) {
