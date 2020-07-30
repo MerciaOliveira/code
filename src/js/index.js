@@ -9,6 +9,11 @@ $(document).ready(function () {
     autoplay: true,
     autoplaySpeed: 5000,
     touchThreshold: 100,
+    customPaging: function (slider, i) {
+      return (
+        '<div class="code__width-container__project__dots" id=' + i + "></div>"
+      );
+    },
   });
   const projectsHtml = createProjectList();
   injectList(projectsHtml);
